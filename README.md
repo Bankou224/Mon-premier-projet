@@ -6,7 +6,7 @@ Mon site CV personnel, présentant mon parcours, mes compétences et mes projets
 
 ## 👤 À propos
 
-Étudiant en Licence 2 de Génie Informatique en Guinée, développeur web full-stack. Passionné par les réseaux, je souhaite me spécialiser en cybersécurité en Master.
+Étudiant en Licence 3 de Génie Informatique en Guinée, développeur web full-stack. Passionné par les réseaux, je souhaite me spécialiser en cybersécurité en Master.
 
 ## ✨ Fonctionnalités
 
