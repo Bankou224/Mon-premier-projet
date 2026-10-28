@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function downloadPDF() {
     const element = document.querySelector(".cv");
-    element.style.zoom = "1";
     const opt = {
         margin: 0,
         filename: 'CV-Bandjan-Kourouma.pdf',
@@ -34,7 +33,6 @@ function downloadPDF() {
 
     // Générer et télécharger le PDF
     html2pdf().set(opt).from(element).save().then(() => {
-        fitCV();
         // Afficher le bouton après génération
         setTimeout(() => {
             if (downloadBtn) {
@@ -61,25 +59,3 @@ window.addEventListener("afterprint", () => {
     document.body.style.padding = "";
     document.body.style.backgroundColor = "";
 });
-
-// Garde la mise en page CV (2 colonnes) sur petit écran en réduisant la page
-function fitCV() {
-    const cv = document.querySelector(".cv");
-    if (!cv) {
-        return;
-    }
-    cv.style.zoom = "1";
-    const pad = window.innerWidth > 900 ? 40 : 0;
-    const scale = Math.min(1, (window.innerWidth - pad) / cv.offsetWidth);
-    cv.style.zoom = scale;
-}
-
-window.addEventListener("load", fitCV);
-window.addEventListener("resize", fitCV);
-window.addEventListener("beforeprint", () => {
-    const cv = document.querySelector(".cv");
-    if (cv) {
-        cv.style.zoom = "1";
-    }
-});
-window.addEventListener("afterprint", fitCV);
