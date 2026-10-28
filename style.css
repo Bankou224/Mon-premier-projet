@@ -502,45 +502,18 @@ body {
 }
 
 /* ===========================
-     RESPONSIVE
+     AFFICHAGE MOBILE
+   La page A4 (2 colonnes) est conservée et réduite
+   par script.js pour tenir dans la largeur de l'écran.
 =========================== */
 
 @media (max-width: 900px) {
-    body{
+    body {
         padding: 0;
     }
+
     .cv {
-        grid-template-columns: 1fr;
-        width: 100%;
-        height: auto;
-        min-height: auto;
-        display: grid;
-        overflow: visible;
+        margin: 0;
         box-shadow: none;
-    }
-    .left{
-        text-align: center;
-        padding: 25px;
-    }
-
-    /* .left
-    .right {
-        width: 100%;
-        padding: 20% 
-    } */
-
-    .photo img {
-        width: 140px;
-        height: 140px;
-    }
-
-    .right {
-        padding: 24px;
-        max-height: none;
-        overflow: visible;
-    }
-
-    .qualities {
-        justify-content: center;
     }
 }
